@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SimConfig xmlns="http://www.pilborough.co.uk/sim/config">
+  <config>
+    <brokerAddress>192.168.1.32</brokerAddress>
+  </config>
+  <profile name="Default">
+    <Mappings>
+      <XKeysInput>
+        <Key ID="1">
+          <type>normal</type>
+          <topic>zusi/control/handbrake/aus</topic>
+          <on><blue>off</blue><red>on</red></on>
+          <off><blue>off</blue><red>off</red></off>
+        </Key>
+        <Key ID="2">
+          <type>normal</type>
+          <topic>zusi/control/handbrake/ein</topic>
+          <on>
+            <blue>on</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="3">
+          <type>toggle</type>
+          <topic>zusi/control/afb</topic>
+          <on>
+            <blue>on</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+        <!--Views-->
+        <Key ID="4">
+          <type>normal</type>
+          <topic>zusi/control/blick/links</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="9">
+          <type>normal</type>
+          <topic>zusi/control/blick/vor</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="11">
+          <type>normal</type>
+          <topic>zusi/control/blick/hinter</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="16">
+          <type>normal</type>
+          <topic>zusi/control/blick/rechts</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="10">
+          <type>normal</type>
+          <topic>zusi/control/blick/change</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+        <Key ID="5">
+          <type>normal</type>
+          <topic>zusi/control/sifa</topic>
+          <on>
+            <blue>off</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+        <!-- Time Control -->
+        <Key ID="6">
+          <type>toggle</type>
+          <topic>zusi/control/pause</topic>
+          <on>
+            <blue>off</blue>
+            <red>blink</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="12">
+          <type>toggle</type>
+          <topic>zusi/control/zeittraffer</topic>
+          <on>
+            <blue>blink</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="18">
+          <type>normal</type>
+          <topic>zusi/control/zeitsprung</topic>
+          <on>
+            <blue>off</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        
+        <!-- View control -->
+        <Key ID="7">
+          <type>normal</type>
+          <topic>zusi/control/display/cheat</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="8">
+          <type>normal</type>
+          <topic>zusi/control/display/fuehrerstand</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="13">
+          <type>normal</type>
+          <topic>zusi/control/display/fahrplan</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="14">
+          <type>normal</type>
+          <topic>zusi/control/display/fuehrerstandplus</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="19">
+          <type>normal</type>
+          <topic>zusi/control/display/menu</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="20">
+          <type>normal</type>
+          <topic>zusi/control/display/data</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+        <Key ID="15">
+          <type>normal</type>
+          <topic>zusi/control/setup</topic>
+          <on>
+            <blue>off</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+        <Key ID="17">
+          <type>toggle</type>
+          <topic>zusi/control/wipers</topic>
+          <on>
+            <blue>off</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+        
+        
+        <!-- Lighting -->
+        <Key ID="21">
+          <type>normal</type>
+          <topic>zusi/home/lights/up</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="22">
+          <type>normal</type>
+          <topic>zusi/home/lights/down</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <!-- Volume -->
+        <Key ID="23">
+          <type>normal</type>
+          <topic>zusi/home/volume/up</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="24">
+          <type>normal</type>
+          <topic>zusi/home/volume/down</topic>
+          <on>
+            <blue>on</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+      </XKeysInput>
+    </Mappings>
+  </profile>
+  <profile name="Test">
+    <Mappings>
+      <XKeysInput>
+        <Key ID="1">
+          <type>normal</type>
+          <topic>zusi/control/sifa</topic>
+          <on>
+            <blue>on</blue>
+            <red>blink</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="2">
+        <type>toggle</type>
+        <topic>zusi/control/fsb</topic>
+        <on>
+          <blue>on</blue>
+          <red>blink</red>
+        </on>
+        <off>
+          <blue>off</blue>
+          <red>off</red>
+        </off>
+        </Key>
+	      <Key ID="3">
+          <type>normal</type>
+          <topic>zusi/control/links</topic>
+          <on>
+            <blue>off</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>on</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        
+        <!--Views-->
+        <Key ID="4">
+          <type>normal</type>
+          <topic>zusi/control/blick/links</topic>
+          <on><blue>off</blue><red>off</red></on>
+          <off><blue>off</blue><red>off</red>
+          </off>
+        </Key>
+        <Key ID="9">
+          <type>normal</type>
+          <topic>zusi/control/blick/vor</topic>
+          <on><blue>off</blue><red>off</red></on>
+          <off><blue>off</blue><red>off</red>
+          </off>
+        </Key>
+        <Key ID="11">
+          <type>normal</type>
+          <topic>zusi/control/blick/hinter</topic>
+          <on><blue>off</blue><red>off</red></on>
+          <off><blue>off</blue><red>off</red>
+          </off>
+        </Key>
+        <Key ID="16">
+          <type>normal</type>
+          <topic>zusi/control/blick/rechts</topic>
+          <on><blue>off</blue><red>off</red></on>
+          <off><blue>off</blue><red>off</red>
+          </off>
+        </Key>
+
+        <Key ID="5">
+          <type>normal</type>
+          <topic>zusi/control/pfeil</topic>
+          <on>
+            <blue>off</blue>
+            <red>on</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        
+        <!-- Time Control -->
+        <Key ID="6">
+          <type>toggle</type>
+          <topic>zusi/control/pause</topic>
+          <on>
+            <blue>off</blue>
+            <red>blink</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+        <Key ID="12">
+          <type>toggle</type>
+          <topic>zusi/control/zeittraffer</topic>
+          <on>
+            <blue>blink</blue>
+            <red>off</red>
+          </on>
+          <off>
+            <blue>off</blue>
+            <red>off</red>
+          </off>
+        </Key>
+
+      </XKeysInput>
+      <keypressOutput>
+        <keypress>
+          <topic>zusi/control/sifa</topic>
+          <hold>KEY_P</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/fsb</topic>
+          <toggle>
+            <activate>KEY_A</activate>
+            <deactivate>KEY_B</deactivate>
+          </toggle>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/links</topic>
+          <sequence>
+            <step>KEY_C</step>
+            <step>KEY_D</step>
+            <step>KEY_E</step>
+            <step>KEY_F</step>
+            <step>KEY_G</step>
+          </sequence>
+        </keypress>
+
+        <keypress>
+          <topic>zusi/control/pause</topic>
+          <toggle>
+            <activate>F2</activate>
+            <deactivate>F2</deactivate>
+          </toggle>
+        </keypress>
+
+        <keypress>
+          <topic>zusi/control/pfeil</topic>
+          <hold>KEY_P</hold>
+        </keypress>
+      
+        <keypress>
+          <topic>zusi/control/blick/links</topic>
+          <hold>LEFT_ARROW</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/blick/rechts</topic>
+          <hold>RIGHT_ARROW</hold>
+        </keypress>  
+        <keypress>
+          <topic>zusi/control/blick/vor</topic>
+          <hold>UP_ARROW</hold>
+        </keypress>  
+        <keypress>
+          <topic>zusi/control/blick/hinter</topic>
+          <hold>DOWN_ARROW</hold>
+        </keypress>  
+  
+      </keypressOutput>
+    </Mappings>
+  </profile>
+  <profile name="Zusi 3">
+    <Mappings>
+		<keypressOutput>
+			<!-- Time Control -->
+			<keypress>
+			  <topic>zusi/control/pause</topic>
+			  <toggle>
+				<activate>F2</activate>
+				<deactivate>F2</deactivate>
+			  </toggle>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/zeittraffer</topic>
+			  <toggle>
+				<activate>F1</activate>
+				<deactivate>F1</deactivate>
+			  </toggle>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/zeitsprung</topic>
+			  <hold>F4</hold>
+			</keypress>
+			<!-- View Control -->
+			<keypress>
+			  <topic>zusi/control/blick/links</topic>
+			  <hold>LEFT_ARROW</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/blick/rechts</topic>
+			  <hold>RIGHT_ARROW</hold>
+			</keypress>  
+			<keypress>
+			  <topic>zusi/control/blick/vor</topic>
+			  <hold>UP_ARROW</hold>
+			</keypress>  
+			<keypress>
+			  <topic>zusi/control/blick/hinter</topic>
+			  <hold>DOWN_ARROW</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/blick/change</topic>
+			  <sequence>
+				<step>F11</step>
+				<step>F12</step>
+				<step>F9</step>
+			  </sequence>
+			</keypress>
+			<!-- Windows -->
+			<keypress>
+			  <topic>zusi/control/display/fuehrerstand</topic>
+			  <hold>F5</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/display/fuehrerstandplus</topic>
+			  <hold>F6</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/display/fahrplan</topic>
+			  <hold>F7</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/display/cheat</topic>
+			  <hold>F8</hold>
+			</keypress>
+			<!--<keypress>
+			  <topic>zusi/control/display/menu</topic>
+			  <toggle>
+				<activate alt="true">KEY_K</activate>
+				<deactivate alt="true">KEY_M</deactivate>
+			  </toggle>
+			</keypress>-->
+		</keypressOutput>
+	</Mappings>
+  </profile>
+  <profile name="Zusi 2">
+    <Mappings>
+		<keypressOutput>
+			<!-- Time Control -->
+			<keypress>
+			  <topic>zusi/control/pause</topic>
+			  <toggle>
+				<activate>F2</activate>
+				<deactivate>F2</deactivate>
+			  </toggle>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/zeittraffer</topic>
+			  <toggle>
+				<activate>F9</activate>
+				<deactivate>F9</deactivate>
+			  </toggle>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/zeitsprung</topic>
+			  <hold>F11</hold>
+			</keypress>
+			<!-- View Control -->
+			<keypress>
+			  <topic>zusi/control/blick/vor</topic>
+			  <hold ctrl="true">KEY_F</hold>
+			</keypress>  
+			<keypress>
+			  <topic>zusi/control/blick/hinter</topic>
+			  <hold ctrl="true">KEY_D</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/blick/change</topic>
+			  <hold ctrl="true">KEY_M</hold>
+			</keypress>
+			<!-- Windows -->
+			<keypress>
+			  <topic>zusi/control/display/fuehrerstand</topic>
+			  <hold>F4</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/display/fahrplan</topic>
+			  <hold>F7</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/display/cheat</topic>
+			  <hold ctrl="true">F8</hold>
+			</keypress>
+			<keypress>
+			  <topic>zusi/control/display/menu</topic>
+			  <hold>F6</hold>
+			</keypress>
+      <keypress>
+			  <topic>zusi/control/display/data</topic>
+			  <hold>F12</hold>
+			</keypress>
+		</keypressOutput>
+	</Mappings>
+  </profile>
+  <profile name="Train Simulator">
+    <Mappings>
+      <keypressOutput>
+        <!-- Time Control -->
+        <keypress>
+          <topic>zusi/control/pause</topic>
+          <toggle>
+            <activate>ESCAPE</activate>
+            <deactivate>ESCAPE</deactivate>
+          </toggle>
+        </keypress>
+        <!-- View Control -->
+			  <keypress>
+			    <topic>zusi/control/blick/links</topic>
+			    <hold>LEFT_ARROW</hold>
+			  </keypress>
+			  <keypress>
+			    <topic>zusi/control/blick/rechts</topic>
+			    <hold>RIGHT_ARROW</hold>
+			  </keypress>  
+			  <keypress>
+			    <topic>zusi/control/blick/vor</topic>
+			    <hold>UP_ARROW</hold>
+			  </keypress>  
+			  <keypress>
+			    <topic>zusi/control/blick/hinter</topic>
+			    <hold>DOWN_ARROW</hold>
+			  </keypress>
+			  <keypress>
+			    <topic>zusi/control/blick/change</topic>
+			    <sequence>
+				    <step>KEY_1</step>
+				    <step>KEY_2</step>
+				    <step>KEY_3</step>
+            <step>KEY_4</step>
+				    <step>KEY_5</step>
+				    <step>KEY_6</step>
+            <step>KEY_7</step>
+				    <step>KEY_8</step>
+			    </sequence>
+			  </keypress>
+        <keypress>
+           <topic>zusi/control/display/fuehrerstand</topic>
+           <hold>KEY_1</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/display/fuehrerstandplus</topic>
+          <toggle>
+            <activate shift="true">KEY_2</activate>
+            <deactivate>DOWN_ARROW</deactivate>
+          </toggle>
+        </keypress>
+        <!-- Windows -->
+        <keypress>
+          <topic>zusi/control/display/fahrplan</topic>
+          <hold>F1</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/display/cheat</topic>
+          <hold>F3</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/display/menu</topic>
+          <hold>F4</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/display/data</topic>
+          <hold>F5</hold>
+        </keypress>
+        <!-- Simulation -->
+        <keypress>
+          <topic>zusi/control/sifa</topic>
+          <hold>NUMPAD_ENTER</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/setup</topic>
+          <sequence>
+				    <step ctrl="true">NUMPAD_ENTER</step>
+				    <step shift="true">NUMPAD_ENTER</step>
+			    </sequence>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/afb</topic>
+          <toggle>
+            <activate>KEY_A</activate>
+            <deactivate>KEY_A</deactivate>
+          </toggle>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/handbrake/ein</topic>
+          <hold shift="true">KEY_7</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/handbrake/aus</topic>
+          <hold shift="true">KEY_7</hold>
+        </keypress>
+        <keypress>
+          <topic>zusi/control/wipers</topic>
+          <toggle>
+            <activate>KEY_V</activate>
+            <deactivate shift="true">KEY_V</deactivate>
+          </toggle>
+        </keypress>
+      </keypressOutput>
+    </Mappings>
+  </profile>
+</SimConfig>

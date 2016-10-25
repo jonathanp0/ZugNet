@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.pilborough.co.uk/sim/config"
+    xmlns:tns="http://www.pilborough.co.uk/sim/config"
+    elementFormDefault="qualified">
+
+  <element name="SimConfig" type="tns:ProfileList"></element>
+
+  <complexType name="ProfileList">
+    <sequence>
+      <element name="config" type="tns:Config" maxOccurs="1" minOccurs="1"></element>
+      <element name="tsMapping" type="tns:TSLocoList" maxOccurs="1" minOccurs="0"></element>
+      <element name="profile" type="tns:Profile" minOccurs="0"
+          maxOccurs="unbounded">
+      </element>
+    </sequence>
+  </complexType>
+
+  <complexType name="Profile">
+    <sequence>
+      <element name="Mappings" type="tns:Mapping"></element>
+    </sequence>
+    <attribute name="name" type="string"></attribute>
+  </complexType>
+
+  <complexType name="Config">
+    <sequence>
+      <element name="Value" type="tns:ConfigValue" minOccurs="0"
+          maxOccurs="unbounded">
+      </element>
+      <element name="brokerAddress" type="string" maxOccurs="1" minOccurs="1"></element>
+      <element name="zusi3Address" type="string" maxOccurs="1" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="ConfigValue">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="ID" type="string" use="required"></attribute>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="Mapping">
+    <sequence>
+      <element name="XKeysInput" type="tns:XKeysInput"
+          minOccurs="0" maxOccurs="1">
+      </element>
+      <element name="firmataInput" type="tns:FirmataInput"
+          maxOccurs="1" minOccurs="0">
+      </element>
+      <element name="keypressOutput" type="tns:KeyPressOutput" maxOccurs="1" minOccurs="0"></element>
+      <element name="zusi3Output" type="tns:Zusi3Output" maxOccurs="1" minOccurs="0"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="XKeysInput">
+    <sequence>
+      <element name="Key" type="tns:Key" minOccurs="0" maxOccurs="unbounded"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="Key">
+    <sequence>
+      <element name="type" type="tns:KeyType"></element>
+      <element name="topic" type="string"></element>
+      <element name="on" type="tns:KeyPosition"></element>
+      <element name="off" type="tns:KeyPosition"></element>
+    </sequence>
+    <attribute name="ID" type="int" use="required"></attribute>
+  </complexType>
+
+  <simpleType name="KeyType">
+    <restriction base="string">
+      <enumeration value="normal"></enumeration>
+      <enumeration value="toggle"></enumeration>
+    </restriction>
+  </simpleType>
+
+  <complexType name="KeyPosition">
+    <sequence>
+      <element name="blue" type="tns:LightState" maxOccurs="1"
+          minOccurs="1">
+      </element>
+      <element name="red" type="tns:LightState" maxOccurs="1"
+          minOccurs="1">
+      </element>
+    </sequence>
+  </complexType>
+
+  <simpleType name="LightState">
+    <restriction base="string">
+      <enumeration value="on"></enumeration>
+      <enumeration value="off"></enumeration>
+      <enumeration value="blink"></enumeration>
+    </restriction>
+  </simpleType>
+
+
+  <complexType name="FirmataInput">
+    <sequence>
+      <element name="pin" type="tns:FirmataPin" maxOccurs="unbounded" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="FirmataPin">
+    <sequence>
+      <element name="topic" type="string" maxOccurs="unbounded" minOccurs="1"></element>
+    </sequence>
+    <attribute name="id" type="int" use="required"></attribute>
+  </complexType>
+
+
+  <simpleType name="PinMode">
+    <restriction base="string">
+      <enumeration value="input"></enumeration>
+      <enumeration value="output"></enumeration>
+    </restriction>
+  </simpleType>
+
+
+  <complexType name="KeyPressOutput">
+    <sequence>
+      <element name="keypress" type="tns:KeyPressFunction" maxOccurs="unbounded" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="KeyPressFunction">
+    <sequence>
+      <element name="topic" type="string" maxOccurs="1"
+          minOccurs="1">
+      </element>
+
+      <choice>
+        <element name="hold" type="tns:KeyPressAction" maxOccurs="1" minOccurs="1"></element>
+        <element name="toggle" type="tns:KeyPressToggle" maxOccurs="1" minOccurs="1"></element>
+        <element name="sequence" type="tns:KeyPressSequence" maxOccurs="unbounded" minOccurs="1"></element>
+      </choice>
+    </sequence>
+  </complexType>
+
+  <complexType name="KeyPressAction">
+
+    <simpleContent>
+      <extension base="string">
+        <attribute name="shift" type="boolean"></attribute>
+        <attribute name="ctrl" type="boolean"></attribute>
+        <attribute name="alt" type="boolean"></attribute>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="KeyPressToggle">
+    <sequence>
+      <element name="activate" type="tns:KeyPressAction"></element>
+      <element name="deactivate" type="tns:KeyPressAction"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="Zusi3Output">
+    <sequence>
+      <element name="control" type="tns:Zusi3Function" maxOccurs="unbounded" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="Zusi3Function">
+    <sequence>
+      <element name="topic" type="string" maxOccurs="1"
+          minOccurs="1">
+      </element>
+
+      <choice>
+        <element name="direct" type="tns:Zusi3Direct" maxOccurs="1" minOccurs="1"></element>
+        <element name="mapping" type="tns:Zusi3Mapping" maxOccurs="unbounded" minOccurs="1"></element>
+      </choice>
+    </sequence>
+  </complexType>
+
+  <complexType name="Zusi3Direct">
+    <attribute name="absolute" type="boolean" use="required"></attribute>
+    <attribute name="zuordnung" type="int" use="required"></attribute>
+    <attribute name="kommand" type="int" use="required"></attribute>
+  </complexType>
+
+  <complexType name="Zusi3Mapping">
+    <attribute name="zuordnung" type="int" use="required"></attribute>
+    <attribute name="kommand" type="int" use="required"></attribute>
+    <attribute name="aktion" type="int" use="required"></attribute>
+    <attribute name="position" type="int" use="required"></attribute>
+  </complexType>
+  
+  
+  <complexType name="TSLocoList">
+    <sequence>
+      <element name="loco" type="tns:TSLoco" maxOccurs="unbounded" minOccurs="0"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="TSLoco">
+    <sequence>
+      <element name="throttle" type="tns:TSControl" maxOccurs="1"
+          minOccurs="0">
+      </element>
+      <element name="custom" type="tns:TSCustomControl" maxOccurs="unbounded" minOccurs="0"></element>
+    </sequence>
+    <attribute name="name" type="string" use="required"></attribute>
+  </complexType>
+
+  <complexType name="TSControl">
+    <sequence>
+      <element name="variable" type="string" maxOccurs="1"
+          minOccurs="1">
+      </element>
+      <element name="notches" type="tns:TSNotches" maxOccurs="1"
+          minOccurs="0">
+      </element>
+      <element name="step" type="float" maxOccurs="1"
+          minOccurs="0">
+      </element>
+      <element name="centerDetent" type="float" maxOccurs="1" minOccurs="0"></element>
+    </sequence>
+  </complexType>
+
+  <complexType name="TSCustomControl">
+    <complexContent>
+      <extension base="tns:TSControl">
+        <attribute name="topic" type="string" use="required"></attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <simpleType name="TSNotches">
+    <list itemType="float"></list>
+  </simpleType>
+
+  <complexType name="KeyPressSequence">
+    <sequence>
+      <element name="step" type="tns:KeyPressAction" maxOccurs="unbounded" minOccurs="1"></element>
+    </sequence>
+  </complexType>
+</schema>
