@@ -55,3 +55,19 @@ Example for KeypressOutput section:
  * Hold depresses the key when '1' is received and releases it when '0' is received.
  * Toggle sends one keystroke a '1' is recieved and then another different one when '0' is received.
  * Sequence sends a series of keystrokes in steps, the next step is activated after a '1' is received. This can be used for instance to switch between a set different view angles withut needing different keys for each one.
+
+## Requirements
+To build the software you will need to some extra binary components:
+Eclipse Paho MQTT Client for C Version 1.x.x - https://eclipse.org/paho/
+RtMidi Version 2.x.x - http://www.music.mcgill.ca/~gary/rtmidi/
+vJoy Feeder SDK - http://vjoystick.sourceforge.net/site/
+
+###Licenses
+Includes code from the Eclipse Paho Project(https://eclipse.org/paho/) licensed under the Eclipse Public License V 1.0:
+Copyright (c) 2009, 2015 IBM Corp.
+
+Includes code from the JUCE Project(http://www.rawmaterialsoftware.com/juce) licensed under the GPL v2 License:
+Copyright 2004-11 by Raw Material Software Ltd.
+
+Includes code from the SimpleIni project(https://github.com/brofield/simpleini) licensed under the MIT License:
+Copyright (c) 2006-2012, Brodie Thiesfield
