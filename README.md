@@ -58,18 +58,22 @@ Example for KeypressOutput section:
 
 ## Requirements
 To build the software you will need to some extra binary components:
-Eclipse Paho MQTT Client for C Version 1.x.x - https://eclipse.org/paho/
-
-RtMidi Version 2.x.x - http://www.music.mcgill.ca/~gary/rtmidi/
-
-vJoy Feeder SDK - http://vjoystick.sourceforge.net/site/
+* Eclipse Paho MQTT Client for C Version 1.x.x - https://eclipse.org/paho/
+* RtMidi Version 2.x.x - http://www.music.mcgill.ca/~gary/rtmidi/
+* vJoy Feeder SDK - http://vjoystick.sourceforge.net/site/
 
 ###Licenses
-Includes code from the Eclipse Paho Project(https://eclipse.org/paho/) licensed under the Eclipse Public License V 1.0:
-Copyright (c) 2009, 2015 IBM Corp.
-
 Includes code from the JUCE Project(http://www.rawmaterialsoftware.com/juce) licensed under the GPL v2 License:
 Copyright 2004-11 by Raw Material Software Ltd.
 
 Includes code from the SimpleIni project(https://github.com/brofield/simpleini) licensed under the MIT License:
 Copyright (c) 2006-2012, Brodie Thiesfield
+
+Includes code derived from PInvoke.NET(http://www.pinvoke.net/) under the PInvoke.NET Terms of Use (http://www.pinvoke.net/termsofuse.htm)
+
+Includes library headers from the vJoy Project(http://vjoystick.sourceforge.net/) under public domain Copyright (c) Shaul Eizikovich.
+
+Includes library headers from the the Eclipse Paho Project(https://eclipse.org/paho/) licensed under the Eclipse Public License V 1.0:
+Copyright (c) 2009, 2015 IBM Corp.
+
+Includes library headers from the RtMidi Project(http://www.music.mcgill.ca/~gary/rtmidi/) licensed under the RtMidi license. Copyright (c) 2003-2016 Gary P. Scavone
