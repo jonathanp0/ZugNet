@@ -63,9 +63,6 @@ To build the software you will need to some extra binary components:
 * vJoy Feeder SDK - http://vjoystick.sourceforge.net/site/
 
 ###Licenses
-Includes code from the JUCE Project(http://www.rawmaterialsoftware.com/juce) licensed under the GPL v2 License:
-Copyright 2004-11 by Raw Material Software Ltd.
-
 Includes code from the SimpleIni project(https://github.com/brofield/simpleini) licensed under the MIT License:
 Copyright (c) 2006-2012, Brodie Thiesfield
 
