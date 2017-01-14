@@ -59,7 +59,9 @@ Example for KeypressOutput section:
 ## Requirements
 To build the software you will need to some extra binary components:
 Eclipse Paho MQTT Client for C Version 1.x.x - https://eclipse.org/paho/
+
 RtMidi Version 2.x.x - http://www.music.mcgill.ca/~gary/rtmidi/
+
 vJoy Feeder SDK - http://vjoystick.sourceforge.net/site/
 
 ###Licenses
