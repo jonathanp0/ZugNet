@@ -6,11 +6,8 @@ They are designed to allow flexibility when using several computers to power the
 Current components are:
 * SimKeypressOutput - Triggers keypresses and key holds based on MQTT Messages
 * SimXKeysInput - Sends MQTT messages triggered by keypresses on an X-Keys XK-24 device. Also allows custommised control of the LED backlights on the device.
-
-Coming soon:
-* Component to convert MQTT messages into joystick inputs(based on the vJoy virtal device driver)
-* Component to send MQTT messages triggered by MIDI messages
-* Broker to feed data from DTG Train Simulator into ZusiDisplay.
+* MQTT2DirectInput - Converts MQTT messages into joystick inputs(based on the vJoy virtal device driver)
+* Midi2MQTT - Converts MQTT messages into joystick inputs(based on the vJoy virtal device driver)
 
 ## User Guide
 ### XKeysInput and KeypressOutput
@@ -55,6 +52,10 @@ Example for KeypressOutput section:
  * Hold depresses the key when '1' is received and releases it when '0' is received.
  * Toggle sends one keystroke a '1' is recieved and then another different one when '0' is received.
  * Sequence sends a series of keystrokes in steps, the next step is activated after a '1' is received. This can be used for instance to switch between a set different view angles withut needing different keys for each one.
+ 
+ ### Midi2MQTT and MQTT2DirectInput
+ 
+ These are command line tools which use an INI-like file format
 
 ## Requirements
 To build the software you will need to some extra binary components:
