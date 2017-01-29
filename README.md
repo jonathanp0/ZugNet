@@ -7,7 +7,7 @@ Current components are:
 * SimKeypressOutput - Triggers keypresses and key holds based on MQTT Messages
 * SimXKeysInput - Sends MQTT messages triggered by keypresses on an X-Keys XK-24 device. Also allows custommised control of the LED backlights on the device.
 * MQTT2DirectInput - Converts MQTT messages into joystick inputs(based on the vJoy virtal device driver)
-* Midi2MQTT - Converts MQTT messages into joystick inputs(based on the vJoy virtal device driver)
+* Midi2MQTT - Converts MIDI messages from an attached USB MIDI device(e.g. a "mixer" or other controller-style device) into MQTT messages
 
 ## User Guide
 ### XKeysInput and KeypressOutput
